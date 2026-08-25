@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'Mikalea';
+    src: url('../fonts/Mikalea.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Bebas';
+    src: url('../fonts/BebasKai.otf') format('opentype');
+}
+:root {
+    --color1: #0A1123; 
+    --color2: #EAE9EE; 
+    --color3: #9692C1; 
+    --color4: #B9B2E8;
+    --color5: #D9D9D9;
+    --color6: #898CAB;
+    --color7:#3A3E6D;
+    --color-light-card: #A3A7D9; 
+
+
+    --font-family: 'Rambla', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--color1);
+}
+/* Layout Base (Desktop e Telas Maiores) */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%; /* Espaçamento padronizado */
+  box-sizing: border-box;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 280px; /* Impede que a logo fique gigante em telas grandes */
+  height: auto;
+  display: block;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Espaçamento flexível entre os links */
+}
+
+header nav a {
+  font-family: var(--font-family);
+  text-decoration: none;
+  font-size: 1.125rem; /* ~18px: 28px costuma quebrar o layout em telas de 1366px */
+  color: var(--color2);
+  -webkit-text-stroke: 0.36px var(--color3);
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.menu-toggle {
+  display: none; /* Escondido por padrão no desktop */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--color2);
+  cursor: pointer;
+}
+
+/* Layout Mobile  */
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 180px; 
+  }
+
+  .menu-toggle {
+    display: block; 
+  }
+
+  header nav {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--color3, #000); 
+    border-radius: 20px;
+    padding: 1.5rem 0;
+    gap: 1.5rem;
+  }
+
+  header nav.active {
+    display: flex;
+  }
+}
