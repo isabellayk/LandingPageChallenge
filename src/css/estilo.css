@@ -27,7 +27,7 @@
 body{
     background-color: var(--color1);
 }
-/* Layout Base (Desktop e Telas Maiores) */
+/* Header */
 header {
   position: absolute;
   top: 0;
@@ -37,13 +37,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 5%; /* Espaçamento padronizado */
+  padding: 1.5rem 5%; 
   box-sizing: border-box;
 }
 
 .logo img {
   width: 100%;
-  max-width: 280px; /* Impede que a logo fique gigante em telas grandes */
+  max-width: 280px;
   height: auto;
   display: block;
 }
@@ -51,13 +51,13 @@ header {
 header nav {
   display: flex;
   align-items: center;
-  gap: 2rem; /* Espaçamento flexível entre os links */
+  gap: 2rem; 
 }
 
 header nav a {
   font-family: var(--font-family);
   text-decoration: none;
-  font-size: 1.125rem; /* ~18px: 28px costuma quebrar o layout em telas de 1366px */
+  font-size: 1.125rem; 
   color: var(--color2);
   -webkit-text-stroke: 0.36px var(--color3);
   white-space: nowrap;
@@ -65,7 +65,7 @@ header nav a {
 }
 
 .menu-toggle {
-  display: none; /* Escondido por padrão no desktop */
+  display: none; 
   background: none;
   border: none;
   font-size: 2rem;
@@ -100,3 +100,124 @@ header nav a {
     display: flex;
   }
 }
+/* Header */
+
+/* HERO */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem 4rem 2rem;
+  overflow: hidden; 
+}
+
+.textosHero {
+  text-align: center;
+  max-width: 850px;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frase1 {
+  font-family: var(--font-family);
+  color: var(--color2);
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+}
+
+.fraseMain {
+  font-family: 'Bebas', sans-serif;
+  color: var(--color2);
+  font-size: clamp(2.8rem, 5vw, 4.8rem); 
+  line-height: 1.05;
+  font-weight: normal;
+  margin-bottom: 1.2rem;
+}
+
+.frase2 {
+  font-family: var(--font-family);
+  color: var(--color2);
+  font-size: 1.125rem;
+  max-width: 650px;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.btn-hero {
+  font-family: var(--font-family);
+  background-color: var(--color2);
+  color: var(--color1);
+  font-weight: bold;
+  font-size: 1.125rem;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 12px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-hero:hover {
+  transform: translateY(-2px);
+  background-color: #ffffff;
+}
+
+.hero-img {
+  position: absolute;
+  pointer-events: none; 
+  z-index: 1;
+}
+
+
+.pasta-top {
+  top: 30%;
+  left: -20px;
+  width: 220px;
+}
+
+.pasta-mid {
+  top: 55%;
+  left: -10px;
+  width: 250px;
+}
+
+.pasta-bot {
+  bottom: 2%;
+  left: 18%;
+  width: 200px;
+}
+
+.celular-hand {
+  bottom: 0;
+  right: 0;
+  width: 320px;
+}
+
+
+@media (max-width: 1200px) {
+  .pasta-top { width: 160px; top: 25%; }
+  .pasta-mid { width: 180px; top: 58%; }
+  .pasta-bot { width: 150px; left: 10%; }
+  .celular-hand { width: 240px; }
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 7rem;
+    min-height: auto;
+  }
+
+  .hero-img {
+    display: none; 
+  }
+
+  .frase2 {
+    font-size: 1rem;
+  }
+}
+/* HERO */
