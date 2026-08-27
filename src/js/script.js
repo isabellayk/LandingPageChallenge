@@ -1,3 +1,4 @@
+// HEADER
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -20,7 +21,8 @@ btnNext.addEventListener('click', () => {
 btnPrev.addEventListener('click', () => {
   carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
 });
-// Footer
+
+// FOOTER
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {

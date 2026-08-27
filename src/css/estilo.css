@@ -9,14 +9,7 @@
 :root {
     --color1: #0A1123; 
     --color2: #EAE9EE; 
-    --color3: #9692C1; 
-    --color4: #B9B2E8;
-    --color5: #D9D9D9;
-    --color6: #898CAB;
-    --color7:#3A3E6D;
-    --color-light-card: #A3A7D9; 
-
-
+   
     --font-family: 'Rambla', sans-serif;
 }
 * {
@@ -800,7 +793,7 @@ header nav a {
   margin-bottom: 4rem;
 }
 
-/* Formulário (Lado Esquerdo) */
+/* Forms*/
 .footer-form-box {
   flex: 1;
   max-width: 550px;
@@ -874,7 +867,6 @@ header nav a {
   transform: translateY(-2px);
 }
 
-/* Info da Marca (Lado Direito) */
 .footer-info-box {
   flex: 0 0 380px;
   display: flex;
