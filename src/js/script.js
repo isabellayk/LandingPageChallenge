@@ -20,3 +20,13 @@ btnNext.addEventListener('click', () => {
 btnPrev.addEventListener('click', () => {
   carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
 });
+// Footer
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Obrigado pelo contato! Sua mensagem foi enviada com sucesso.');
+    contactForm.reset();
+  });
+}
